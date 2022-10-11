@@ -1,28 +1,34 @@
 // Principal function to make a country card
-const CountryCard = () => {
+export const CountryCard = (props) => {
+    const { capital, flag, names, population, region } = props;
+
     return `
         <div class="card">
             <div class="blob"></div>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/2560px-Flag_of_Colombia.svg.png"
-                alt="" class="img">
-            <h2>Country<span>Region</span></h2>
+            <img 
+                src="${flag}"
+                alt=${names.common} 
+                class="img"
+            >
+            <h2>Country<span>${region}</span></h2>
             <div class="infoCountry">
                 <div class="info">
                     <img class="icon" src="./public/assets/population.png" alt="">
-                    <p>25</p>
+                    <p>${population}</p>
                 </div>
                 <div class="info">
                     <img class="icon" src="./public/assets/region.png" alt="">
-                    <p>capital</p>
+                    <p>${capital}</p>
                 </div>
             </div>
         </div>
     `;
 };
 
-const CreateContainerCard = () => {
-    return `
-    <section class="contain__cards">
-    </section>
-    `;
-}
+export const createContainer = (className) => {
+    // It creates a container and that have a variant section
+    const section = document.createElement('section');
+    section.className = className;
+
+    return section;
+};
