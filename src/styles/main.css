@@ -14,23 +14,63 @@
     --LetterColor: #ffff;
 }
 
+body{
+    background: linear-gradient(to top, #19223b, #10172a);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 main {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to top, #19223b, #10172a);
+    /* height: 100vh; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.contain {
-    width: 70%;
+.appTitle {
+    width: 50%;
     height: 90%;
+    
     color: var(--LetterColor);
-    font-size: 4rem;
+    font-size: 2rem;
+    
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+
+    margin-bottom: 50px;
+    padding: 50px 0;
+    border-bottom: 2px solid var(--LetterColor);
+
+}
+
+.contain__cards{
+    width: 70%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+@media (max-width: 1000px) {
+    .appTitle {
+        font-size: 1.6rem;
+    }
+}
+@media (max-width: 500px) {
+    .appTitle {
+        width: 80%;
+    }
+
+    .contain__cards{
+        gap: 15px;
+    }
 }

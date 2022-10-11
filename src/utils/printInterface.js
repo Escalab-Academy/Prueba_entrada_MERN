@@ -10,7 +10,7 @@ export const CountryCard = (props) => {
                 alt=${names.common} 
                 class="img"
             >
-            <h2>Country<span>${region}</span></h2>
+            <h2>${names.common}<span>${region}</span></h2>
             <div class="infoCountry">
                 <div class="info">
                     <img class="icon" src="./public/assets/population.png" alt="">
