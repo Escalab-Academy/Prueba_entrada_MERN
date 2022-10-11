@@ -6,7 +6,10 @@ export const getDataAll = async () => {
 
     const countriesMapped = data.map((element) => {
         return {
-            names: element.name,
+            names: {
+                common: element.name.common,
+                official: element.name.official
+            },
             flag: element.flags.svg,
             population: element.population,
             region: element.region,
@@ -15,4 +18,16 @@ export const getDataAll = async () => {
     });
 
     return countriesMapped;
+};
+
+export const getDataSearch = (name) => {
+    return fetch(`https://restcountries.com/v3.1/name/${name}`)
+        .then((res) => res.json())
+        .catch((err) => err);
+};
+
+export const getDataFilter = (region) => {
+    return fetch(`https://restcountries.com/v3.1/region/${region}`)
+        .then((res) => res.json())
+        .catch((err) => err);
 };
