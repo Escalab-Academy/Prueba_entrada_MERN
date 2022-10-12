@@ -1,5 +1,5 @@
 //View changer
-import { loadHome } from './endPoints.js';
+import { loadFilter, loadHome, loadSearch } from './endPoints.js';
 
 //Function to know where is the app actually
 export const onHashChangeHandler = async (hash) => {
@@ -12,11 +12,11 @@ export const onHashChangeHandler = async (hash) => {
             break;
 
         case 'search':
-            await loadHome();
+            await loadSearch(DynamicData);
             break;
 
         case 'filter':
-            await loadHome();
+            await loadFilter(DynamicData);
             break;
 
         default:
