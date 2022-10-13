@@ -1,5 +1,8 @@
-//View changer
+// View changer
 import { loadFilter, loadHome, loadSearch } from './endPoints.js';
+
+// view Function
+import { showLoader } from '../utils/printInterface.js';
 
 //Function to know where is the app actually
 export const onHashChangeHandler = async (hash) => {
@@ -8,7 +11,10 @@ export const onHashChangeHandler = async (hash) => {
 
     switch (endPoint) {
         case 'home':
+            showLoader(true);
             await loadHome();
+
+            setTimeout(() => showLoader(false), 2500);
             break;
 
         case 'search':
@@ -16,7 +22,10 @@ export const onHashChangeHandler = async (hash) => {
             break;
 
         case 'filter':
+            showLoader(true);
             await loadFilter(DynamicData);
+
+            setTimeout(() => showLoader(false), 2500);
             break;
 
         default:

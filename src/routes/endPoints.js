@@ -1,22 +1,17 @@
-//Import of DOM route
+// Import of DOM route
 import { Root } from '../utils/nodes.js';
 
-//Import fetch Data
+// Import fetch Data
 import {
     getDataAll,
     getDataFilter,
     getDataSearch
 } from '../utils/fetchData.js';
 
-//Import of section creator
-import {
-    createContainer,
-    CountryCard,
-    printOnTarget
-} from '../utils/printInterface.js';
+// Import of section creator
+import { printOnTarget } from '../utils/printInterface.js';
 
 //Function to clear the Root
-
 export const ClearRoot = () => {
     Root.innerHTML = '';
     return true;
