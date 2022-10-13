@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./src/styles/main.css">
     <!-- styles cards -->
     <link rel="stylesheet" href="./src/styles/card.css">
+    <!-- Loader styles  -->
+    <link rel="stylesheet" href="./src/styles/loaderAnimations.css">
+    <!-- Loader Styles -->
+    <link rel="stylesheet" href="./src/styles/loader.css">
+
     <title>Prueba Entrada MERN</title>
 </head>
 
@@ -41,6 +46,33 @@
             <!-- <section class="containcards"></section> -->
 
         </main>
+
+        <div class="modal" id="loader">
+            <!-- Principal container -->
+            <div class="container">
+                <!-- Borders for the animations -->
+                <div class="border borderWhite">
+                    <span class="borderRadius borderRadiusWTop"></span>
+                    <span class="borderRadius borderRadiusWBottom"></span>
+                </div>
+                <div class="border borderBlue">
+                    <span class="borderRadius borderRadiusBTop"></span>
+                    <span class="borderRadius borderRadiusBBottom"></span>
+                </div>
+                
+                <!-- Circles on the midle animations place -->
+                <div class="circle circleBlueL">
+                    <div class="circle circleWhite">
+                        <div class="circle circleBlueD">
+                            <div class="containTriangle">
+                                <img src="./public/assets/triangleB.svg" alt="" class="triangle triangleBlue">
+                                <img src="./public/assets/triangleW.svg" alt="" class="triangle triangleWhite">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="./src/index.js" type="module"></script>
 

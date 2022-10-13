@@ -1,0 +1,102 @@
+/* Animations for each circle for make a different timing in animation */
+/* Animation ligth blue circle */
+@keyframes animationCircleL {
+    0%,100%{
+        transform: scale(0);
+    }
+    10%,90%{
+        transform: scale(1.1);
+    }
+    20%,80%{
+        transform: scale(1);
+    }
+}
+/* Animation white circle */
+@keyframes animationCircleW {
+    0%,100%{
+        transform: scale(0);
+    }
+    15%,85%{
+        transform: scale(1.1);
+    }
+    25%,75%{
+        transform: scale(1);
+    }
+}
+/* Animation dark blue circle */
+@keyframes animationCircleD {
+    0%,100%{
+        transform: scale(0);
+    }
+    20%,80%{
+        transform: scale(1.2);
+    }
+    30%,70%{
+        transform: scale(1.1);
+    }
+}
+
+/* Animation for each triangle for different timings on the animation */
+/* Animation White Triangle */
+@keyframes animationTriangleW {
+    0%, 100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    20%,80%{
+    transform: scale(1.1);
+    opacity: 1;
+    }
+    30%,70%{
+    transform: scale(1);
+    }
+}
+/* Animation blue Triangle */
+@keyframes animationTriangleB {
+    0%, 100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    25%,75%{
+    transform: scale(1.1);
+    opacity: 1;
+    }
+    35%,65%{
+    transform: scale(1);
+    }
+}
+
+/* Animation for each border  */
+
+@keyframes animationBorderW {
+    0%,70%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    30%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+        transform: rotate(270deg);
+    }
+    55%{
+        opacity: 1;
+    }
+}
+@keyframes animationBorderB {
+    0%,70%{
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    35%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+        transform: rotate(270deg);
+    }
+    60%{
+        opacity: 1;
+    }
+}
