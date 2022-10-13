@@ -2,9 +2,9 @@
 import { onHashChangeHandler } from './routes/index.js';
 
 //Import nodes
-import { regions, inputSearch, searchBtn } from './utils/nodes.js';
+import { regions, inputSearch, searchBtn, homeTitle } from './utils/nodes.js';
 
-const onLoadFunction = async () => {
+const onLoadFunction = () => {
     location.hash = '_home';
 };
 
@@ -39,3 +39,6 @@ regions.forEach((btn) => {
 
 //Events of search
 searchBtn.addEventListener('click', () => onSearchFunction(inputSearch.value));
+
+//Event in the title to go Home
+homeTitle.addEventListener('click', onLoadFunction);

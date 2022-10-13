@@ -1,13 +1,11 @@
 //Import nodes
 import { Loader } from './nodes.js';
 
-// Principal function to make a country card
-export const CountryCard = (props) => {
+const contentCard = (props) => {
     const { capital, flag, names, population, region } = props;
 
     return `
-        <div class="card">
-            <div class="blob"></div>
+        <div class="blob"></div>
             <img 
                 src="${flag}"
                 alt=${names.common} 
@@ -23,9 +21,33 @@ export const CountryCard = (props) => {
                     <img class="icon" src="./public/assets/region.png" alt="">
                     <p>${capital}</p>
                 </div>
-            </div>
         </div>
     `;
+};
+
+// Principal function to make a country card
+export const CountryCard = (props) => {
+    //Props needed for this component
+    const {
+        names: { common }
+    } = props;
+
+    //Creation the content of the card
+    const content = contentCard(props);
+
+    //Creation of a content card
+    const divCard = document.createElement('div');
+    divCard.classList.add('card');
+    divCard.innerHTML = content;
+
+    const newName = common.toLowerCase().split(' ').join('_');
+
+    divCard.addEventListener(
+        'click',
+        () => (location.hash = `_details_${newName}`)
+    );
+
+    return divCard;
 };
 
 const detailsTemplate = (props) => {
@@ -52,7 +74,8 @@ export const printOnTarget = (data, target) => {
 
     // Place to create the section and join all cards inside the section
     const container = createContainer('contain__cards');
-    container.innerHTML = cards.join('');
+
+    container.append(...cards);
 
     // Joining the section on DOM
     target.appendChild(container);
