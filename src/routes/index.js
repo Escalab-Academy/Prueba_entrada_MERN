@@ -22,7 +22,10 @@ export const onHashChangeHandler = async (hash) => {
             break;
 
         case 'filter':
+            showLoader(true);
             await loadFilter(DynamicData);
+
+            setTimeout(() => showLoader(false), 2500);
             break;
 
         default:
