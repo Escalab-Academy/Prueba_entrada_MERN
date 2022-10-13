@@ -1,6 +1,3 @@
-//Import interface loader
-import { loadHome } from './routes/endPoints.js';
-
 //Import hash handler controller
 import { onHashChangeHandler } from './routes/index.js';
 

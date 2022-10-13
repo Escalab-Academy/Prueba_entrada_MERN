@@ -9,31 +9,55 @@ import {
 } from '../utils/fetchData.js';
 
 //Import of section creator
-import { createContainer, CountryCard } from '../utils/printInterface.js';
+import {
+    createContainer,
+    CountryCard,
+    printOnTarget
+} from '../utils/printInterface.js';
+
+//Function to clear the Root
+
+export const ClearRoot = () => {
+    Root.innerHTML = '';
+    return true;
+};
 
 //Function to load the Home "/"
 export const loadHome = async () => {
+    //First we clear the root where the cotent is going to be painted
+    ClearRoot();
+
+    // Get the data from the API
     const countries = await getDataAll();
 
-    // Map al countries as a card for each one
-    const cards = countries.map((element) => CountryCard(element));
-
-    // Place to create the section and join all cards inside the section
-    const container = createContainer('contain__cards');
-    container.innerHTML = cards.join('');
-
-    // Joining the section on DOM
-    Root.appendChild(container);
+    // This function is going to print the data in an especific place
+    printOnTarget(countries, Root);
 };
 
 export const loadSearch = async (Dynamic) => {
+    // First we clear the root where content is going to be painted
+    ClearRoot();
+
+    // Get the data from the API
     const country = await getDataSearch(Dynamic);
 
-    console.log(country);
+    if (!country) {
+        console.error('some errors here');
+        location.hash = '_home';
+        return;
+    }
+
+    // This function is going to print the data in an especific place
+    printOnTarget(country, Root);
 };
 
 export const loadFilter = async (Dynamic) => {
+    // First we clear the root where the cotent is going to be painted
+    ClearRoot();
+
+    // Get the data from the API
     const country = await getDataFilter(Dynamic);
 
-    console.log(country);
+    // This function is going to print the data in an especific place
+    printOnTarget(country, Root);
 };

@@ -32,3 +32,15 @@ export const createContainer = (className) => {
 
     return section;
 };
+
+export const printOnTarget = (data, target) => {
+    // Map all region countries as a card for each one
+    const cards = data.map((element) => CountryCard(element));
+
+    // Place to create the section and join all cards inside the section
+    const container = createContainer('contain__cards');
+    container.innerHTML = cards.join('');
+
+    // Joining the section on DOM
+    target.appendChild(container);
+};
