@@ -1,3 +1,6 @@
+//Import nodes
+import { Loader } from './nodes.js';
+
 // Principal function to make a country card
 export const CountryCard = (props) => {
     const { capital, flag, names, population, region } = props;
@@ -43,4 +46,12 @@ export const printOnTarget = (data, target) => {
 
     // Joining the section on DOM
     target.appendChild(container);
+};
+
+export const showLoader = (show) => {
+    if (show) {
+        Loader.classList.remove('hidden');
+    } else {
+        Loader.classList.add('hidden');
+    }
 };
