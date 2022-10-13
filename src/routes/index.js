@@ -1,5 +1,5 @@
 // View changer
-import { loadFilter, loadHome, loadSearch } from './endPoints.js';
+import { loadFilter, loadHome, loadSearch, loadDetails } from './endPoints.js';
 
 // view Function
 import { showLoader } from '../utils/printInterface.js';
@@ -18,7 +18,10 @@ export const onHashChangeHandler = async (hash) => {
             break;
 
         case 'search':
+            showLoader(true);
             await loadSearch(DynamicData);
+
+            setTimeout(() => showLoader(false), 2500);
             break;
 
         case 'filter':
@@ -26,6 +29,10 @@ export const onHashChangeHandler = async (hash) => {
             await loadFilter(DynamicData);
 
             setTimeout(() => showLoader(false), 2500);
+            break;
+
+        case 'details':
+            await loadDetails(DynamicData);
             break;
 
         default:

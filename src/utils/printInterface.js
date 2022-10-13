@@ -28,6 +28,16 @@ export const CountryCard = (props) => {
     `;
 };
 
+const detailsTemplate = (props) => {
+    console.log(props);
+
+    const {} = props;
+
+    return `
+
+    `;
+};
+
 export const createContainer = (className) => {
     // It creates a container and that have a variant section
     const section = document.createElement('section');
@@ -43,6 +53,17 @@ export const printOnTarget = (data, target) => {
     // Place to create the section and join all cards inside the section
     const container = createContainer('contain__cards');
     container.innerHTML = cards.join('');
+
+    // Joining the section on DOM
+    target.appendChild(container);
+};
+
+export const printDetails = (data, target) => {
+    const template = detailsTemplate(data);
+
+    // Place to create the section and join all cards inside the section
+    const container = createContainer('details_country');
+    container.innerHTML = template;
 
     // Joining the section on DOM
     target.appendChild(container);

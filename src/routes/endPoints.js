@@ -5,11 +5,12 @@ import { Root } from '../utils/nodes.js';
 import {
     getDataAll,
     getDataFilter,
-    getDataSearch
+    getDataSearch,
+    getDataDetails
 } from '../utils/fetchData.js';
 
 // Import of section creator
-import { printOnTarget } from '../utils/printInterface.js';
+import { printOnTarget, printDetails } from '../utils/printInterface.js';
 
 //Function to clear the Root
 export const ClearRoot = () => {
@@ -55,4 +56,15 @@ export const loadFilter = async (Dynamic) => {
 
     // This function is going to print the data in an especific place
     printOnTarget(country, Root);
+};
+
+export const loadDetails = async (Dynamic) => {
+    // First we clear the root where the cotent is going to be painted
+    ClearRoot();
+
+    // Get the country from the API
+    const country = await getDataDetails(Dynamic);
+
+    // This function is going to print the data in an especific place
+    printDetails(country, Root);
 };
