@@ -14,7 +14,7 @@
     --LetterColor: #ffff;
 }
 
-body{
+body {
     background: linear-gradient(to top, #19223b, #10172a);
     width: 100%;
     display: flex;
@@ -25,7 +25,7 @@ body{
 main {
     width: 100%;
     /* height: 100vh; */
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,22 +35,94 @@ main {
 .appTitle {
     width: 50%;
     height: 90%;
-    
+
     color: var(--LetterColor);
     font-size: 2rem;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 
     margin-bottom: 50px;
     padding: 50px 0;
     border-bottom: 2px solid var(--LetterColor);
+    gap: 30px;
 
 }
 
-.contain__cards{
+.containInteractive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.appForm {
+    width: 60%;
+    height: 50px;
+}
+
+.appInput {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffff;
+    border-radius: 30px;
+    background: transparent;
+    color: var(--LetterColor);
+    font-size: 2rem;
+    padding-left: 20px;
+}
+
+.AppSelect {
+    width: 40%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: var(--DarkBlue);
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.AppTextSelect:hover {
+    background: rgba(255, 255, 255, 50%);
+}
+
+.AppSelect:hover {
+    height: 300px;
+    transition: .5s ease-in-out;
+}
+
+.AppTextSelect {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: var(--DarkBlue);
+    font-size: 2rem;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+.textSelect {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    border: 0;
+    background: transparent;
+    color: var(--LetterColor);
+    border-bottom: 1px solid rgb(119, 119, 119);
+}
+
+.textSelect:hover {
+    background: var(--LigthBlue);
+    cursor: pointer;
+}
+
+.contain__cards {
     width: 70%;
     max-width: 1000px;
 
@@ -65,12 +137,13 @@ main {
         font-size: 1.6rem;
     }
 }
+
 @media (max-width: 500px) {
     .appTitle {
         width: 80%;
     }
 
-    .contain__cards{
+    .contain__cards {
         gap: 15px;
     }
 }
