@@ -44,3 +44,15 @@ export const getDataFilter = async (region) => {
 
     return countriesMapped;
 };
+
+export const getDataDetails = async (name) => {
+    const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+    const data = await res.json();
+
+    // If the search have some incorrect it will return a boolean
+    if (data.status == 404) {
+        return false;
+    }
+
+    return data;
+};

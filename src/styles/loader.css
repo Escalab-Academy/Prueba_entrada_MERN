@@ -1,15 +1,15 @@
-:root{
+:root {
     --light-blue: #5072DF;
     --dark-blue: #10172A;
     --white: #fff;
 }
 
 /* Body works like a modal on a app */
-.modal{
-    position: absolute;
+.modal {
+    position: fixed;
     top: 0;
 
-    
+
     width: 100%;
     height: 100vh;
     background: var(--dark-blue);
@@ -17,14 +17,14 @@
     justify-content: center;
     align-items: center;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
 /* Principal container in the Animation */
-.container{
+.container {
     width: 100px;
     height: 100px;
-    
+
     /* Flex to align al items on the container */
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@
 
 /* Border On the principal animations part */
 /* Global styles of both borders */
-.border{
+.border {
     width: 120%;
     height: 120%;
     padding: 20px;
@@ -46,49 +46,55 @@
     border-color: transparent;
     position: absolute;
 
-    transform:rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
 }
-.borderWhite{
+
+.borderWhite {
     border-right-color: var(--white);
     animation: animationBorderW 4s 1s ease-in-out infinite;
 }
-.borderRadius{
+
+.borderRadius {
     position: absolute;
     display: block;
     width: 2px;
     height: 2px;
     border-radius: 50%;
 }
-.borderRadiusWTop{
+
+.borderRadiusWTop {
     right: 18.6px;
     top: 19px;
     background: var(--white);
 }
-.borderRadiusWBottom{
+
+.borderRadiusWBottom {
     right: 18.6px;
     bottom: 19px;
     background: var(--white);
 }
-.borderRadiusBTop{
+
+.borderRadiusBTop {
     right: 18.6px;
     top: 19px;
     background: var(--light-blue);
 }
-.borderRadiusBBottom{
+
+.borderRadiusBBottom {
     right: 18.6px;
     bottom: 19px;
     background: var(--light-blue);
 }
 
-.borderBlue{
+.borderBlue {
     border-right-color: var(--light-blue);
     animation: animationBorderB 4s 1s ease-in-out infinite;
 }
 
 /* circles content On the animation */
 /* Global styles each circle principal */
-.circle{
+.circle {
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -96,21 +102,24 @@
     justify-content: center;
     align-items: center;
 }
-.circleBlueL{
+
+.circleBlueL {
     background: var(--light-blue);
     animation: animationCircleL 4s ease-in-out infinite;
 }
-.circleWhite{
+
+.circleWhite {
     background: var(--white);
     animation: animationCircleW 4s ease-in-out infinite;
 }
-.circleBlueD{
+
+.circleBlueD {
     background: var(--dark-blue);
     animation: animationCircleD 4s ease-in-out infinite;
 }
 
 /* Triangle styles with her respective animations */
-.containTriangle{
+.containTriangle {
     width: 50%;
     height: 50%;
     display: flex;
@@ -118,23 +127,26 @@
     align-items: center;
     position: relative;
 }
+
 /* Global styles of both triangles */
-.triangle{
+.triangle {
     position: absolute;
     width: 35px;
     height: 35px;
     transform-origin: bottom left;
 }
-.triangleWhite{
+
+.triangleWhite {
     left: 2px;
     animation: animationTriangleW 4s ease-in-out infinite;
 }
-.triangleBlue{
+
+.triangleBlue {
     right: 2px;
     animation: animationTriangleB 4s ease-in-out infinite;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     visibility: hidden;
 

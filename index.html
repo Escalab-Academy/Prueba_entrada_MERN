@@ -1,87 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- styles home -->
-        <link rel="stylesheet" href="./src/styles/main.css" />
-        <!-- styles cards -->
-        <link rel="stylesheet" href="./src/styles/card.css" />
-        <!-- Loader styles  -->
-        <link rel="stylesheet" href="./src/styles/loaderAnimations.css" />
-        <!-- Loader Styles -->
-        <link rel="stylesheet" href="./src/styles/loader.css" />
 
-        <title>Prueba Entrada MERN</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles home -->
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <!-- styles cards -->
+    <link rel="stylesheet" href="./src/styles/card.css" />
+    <!-- Loader styles  -->
+    <link rel="stylesheet" href="./src/styles/loaderAnimations.css" />
+    <!-- details styles -->
+    <link rel="stylesheet" href="./src/styles/details.css" />
+    <!-- Loader Styles -->
+    <link rel="stylesheet" href="./src/styles/loader.css" />
+    <title>Prueba Entrada MERN</title>
+</head>
 
-    <body>
-        <header class="appTitle">
-            <h1>Escalab | Country Search</h1>
-            <div class="containInteractive">
-                <form action="" class="appForm">
-                    <input
-                        type="text"
-                        class="appInput"
-                        placeholder="Search Country"
-                        id="inputSearch"
-                    />
-                    <button class="buttonSearch">🔍</button>
-                </form>
+<body>
+    <header class="appTitle">
+        <button id="homeTitle" type="button" class="buttonTitle">Escalab | Country Search</button>
+        <div class="containInteractive">
+            <form action="" class="appForm">
+                <input type="text" class="appInput" placeholder="Search Country" id="inputSearch" />
+                <button type="button" class="buttonSearch" id="searchBtn">
+                    🔍
+                </button>
+            </form>
 
-                <div class="AppSelect">
-                    <h1 class="AppTextSelect">Filter Regions</h1>
-                    <button type="button" class="textSelect">Africa</button>
-                    <button type="button" class="textSelect">America</button>
-                    <button type="button" class="textSelect">Asia</button>
-                    <button type="button" class="textSelect">Europe</button>
-                    <button type="button" class="textSelect">Oceania</button>
-                </div>
+            <div class="AppSelect">
+                <h1 class="AppTextSelect">Filter Regions</h1>
+                <button type="button" class="textSelect">Africa</button>
+                <button type="button" class="textSelect">America</button>
+                <button type="button" class="textSelect">Asia</button>
+                <button type="button" class="textSelect">Europe</button>
+                <button type="button" class="textSelect">Oceania</button>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <main id="root">
-            <!-- Section contain__cards it's going to be here
+    <main id="root">
+        <!-- Section contain__cards it's going to be here
             when the hash stay in "_home"-->
-            <!-- <section class="containcards"></section> -->
-        </main>
+        <!-- <section class="containcards"></section> -->
+    </main>
 
-        <div class="modal" id="loader">
-            <!-- Principal container -->
-            <div class="container">
-                <!-- Borders for the animations -->
-                <div class="border borderWhite">
-                    <span class="borderRadius borderRadiusWTop"></span>
-                    <span class="borderRadius borderRadiusWBottom"></span>
-                </div>
-                <div class="border borderBlue">
-                    <span class="borderRadius borderRadiusBTop"></span>
-                    <span class="borderRadius borderRadiusBBottom"></span>
-                </div>
+    <div class="modal" id="loader">
+        <!-- Principal container -->
+        <div class="container">
+            <!-- Borders for the animations -->
+            <div class="border borderWhite">
+                <span class="borderRadius borderRadiusWTop"></span>
+                <span class="borderRadius borderRadiusWBottom"></span>
+            </div>
+            <div class="border borderBlue">
+                <span class="borderRadius borderRadiusBTop"></span>
+                <span class="borderRadius borderRadiusBBottom"></span>
+            </div>
 
-                <!-- Circles on the midle animations place -->
-                <div class="circle circleBlueL">
-                    <div class="circle circleWhite">
-                        <div class="circle circleBlueD">
-                            <div class="containTriangle">
-                                <img
-                                    src="./public/assets/triangleB.svg"
-                                    alt=""
-                                    class="triangle triangleBlue"
-                                />
-                                <img
-                                    src="./public/assets/triangleW.svg"
-                                    alt=""
-                                    class="triangle triangleWhite"
-                                />
-                            </div>
+            <!-- Circles on the midle animations place -->
+            <div class="circle circleBlueL">
+                <div class="circle circleWhite">
+                    <div class="circle circleBlueD">
+                        <div class="containTriangle">
+                            <img src="./public/assets/triangleB.svg" alt="" class="triangle triangleBlue" />
+                            <img src="./public/assets/triangleW.svg" alt="" class="triangle triangleWhite" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="./src/index.js" type="module"></script>
-    </body>
+    <script src="./src/index.js" type="module"></script>
+</body>
+
 </html>
