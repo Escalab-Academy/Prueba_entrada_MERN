@@ -32,7 +32,10 @@ export const onHashChangeHandler = async (hash) => {
             break;
 
         case 'details':
+            showLoader(true);
             await loadDetails(DynamicData);
+
+            setTimeout(() => showLoader(false), 2500);
             break;
 
         default:
