@@ -53,10 +53,34 @@ export const CountryCard = (props) => {
 const detailsTemplate = (props) => {
     console.log(props);
 
-    const {} = props;
+    const { capital, flags, altSpellings, borders, coatOfArms, continents, languages, population, timezones } = props;
 
     return `
-
+        <h1 class="titleDetails">DETAILS</h1>
+        <div class="containDetails">
+            <div class="colum colum1">
+                    <img src="${flags.png}" class="imageFlagDetails"/>
+                    <div class="boxText">
+                        <p class="text">Name: ${altSpellings[1]}</p>
+                        <p class="text">Capital: ${capital[0]}</p>
+                    </div>
+                </div>
+                <div class="colum colum2">
+                    <img src="${coatOfArms.png}" class="imageEscudoDetails"/>
+                    <div class="boxText">
+                        <p class="text">Lenguages: ${Object.values(languages).map((e) => e)}</p>
+                        <p class="text">Borders: ${borders}</p>
+                    </div>
+                </div>
+                <div class="colum colum3">
+                    <div class="boxText">
+                        <p class="text">Region: ${continents[0]}</p>
+                        <p class="text">Population: ${population}</p>
+                        <p class="text">Time Zone: ${timezones}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     `;
 };
 
@@ -82,8 +106,7 @@ export const printOnTarget = (data, target) => {
 };
 
 export const printDetails = (data, target) => {
-    const template = detailsTemplate(data);
-
+    const template = Array.isArray(data) ? detailsTemplate(data[0]) : detailsTemplate(data);
     // Place to create the section and join all cards inside the section
     const container = createContainer('details_country');
     container.innerHTML = template;
