@@ -32,6 +32,19 @@ main {
     flex-direction: column;
 }
 
+.headerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img_escalab {
+    width: 300px;
+    height: 80px;
+}
+
 .appTitle {
     width: 50%;
     height: 90%;
@@ -51,18 +64,18 @@ main {
 
 .buttonTitle {
     color: var(--LetterColor);
-    font-size: 4.5rem;
+    font-size: 2.9rem;
     background: transparent;
     border: 0;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 400;
     transform: scale(1);
     transition: .5s ease-in-out;
+    letter-spacing: 20px;
 }
 
 .buttonTitle:hover {
     text-shadow: 0 0 1rem #4e73de;
-    transform: scale(1.1);
     transition: .5s ease-in-out;
 }
 
@@ -186,13 +199,25 @@ main {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .appTitle {
         width: 80%;
     }
 
     .contain__cards {
         gap: 15px;
+    }
+
+    .img_escalab {
+        width: 200px;
+    }
+
+    .buttonTitle {
+        font-size: 2rem;
+    }
+
+    .headerContent {
+        gap: 5px;
     }
 
 }
