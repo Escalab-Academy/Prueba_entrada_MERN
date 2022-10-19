@@ -38,6 +38,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    cursor: pointer;
 }
 
 .img_escalab {
@@ -64,7 +65,7 @@ main {
 
 .buttonTitle {
     color: var(--LetterColor);
-    font-size: 2.9rem;
+    font-size: 2rem;
     background: transparent;
     border: 0;
     cursor: pointer;
@@ -72,6 +73,7 @@ main {
     transform: scale(1);
     transition: .5s ease-in-out;
     letter-spacing: 20px;
+    line-height: 50px;
 }
 
 .buttonTitle:hover {
@@ -144,12 +146,12 @@ main {
 
 .AppTextSelect {
     display: block;
-    width: 100%;
+    width: 80%;
     height: 50px;
     border-radius: 15px;
     border: 2px solid #ffff;
     background: var(--DarkBlue);
-    font-size: 2rem;
+    font-size: 1.6rem;
     white-space: nowrap;
     position: relative;
     cursor: pointer;
